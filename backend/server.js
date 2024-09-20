@@ -5,6 +5,7 @@ const app = express();
 
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.route.js";
+import userRoutes from "./routes/user.route.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 
 dotenv.config();
@@ -18,6 +19,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 
 app.use("/api/messages", messageRoutes);
+app.use("/api/users", userRoutes);
 // Example root route
 // app.get("/", (req, res) => {
 //   res.send("App is ready");

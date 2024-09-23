@@ -4,7 +4,9 @@
   "description": "Real-time chat app with login functionality created using MERN stack",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon backend/server.js"
+    "server": "nodemon backend/server.js",
+    "start": "node backend/server.js",
+    "build": "npm install & npm install --prefix frontend/chat-application && npm run build --prefix frontend/chat-application"
   },
   "type": "module",
   "repository": {

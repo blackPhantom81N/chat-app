@@ -3,9 +3,11 @@ import MessageContainer from "./MessageContainer";
 import Message from "./Message";
 import useGetMessages from "../../hooks/useGetMessages";
 import MessageSkeleton from "../skeltons/MessageSkelton";
+import useListenMessages from "../../hooks/useListenMessages";
 
 const Messages = () => {
   const { loading, messages } = useGetMessages();
+  useListenMessages();
   const lastMessage = useRef();
   useEffect(() => {
     setTimeout(() => {

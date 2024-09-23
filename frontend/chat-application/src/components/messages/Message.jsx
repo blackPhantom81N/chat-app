@@ -12,6 +12,8 @@ const Message = ({ message }) => {
     ? authUser?.profilePic
     : selectedConversation?.profilePic;
   const bubbleBgColor = isMessageSelf ? "bg-blue-500" : "";
+  const shakeClass = message?.shouldShake ? "shake" : "";
+
   return (
     <div className={`chat ${chatClassName}`}>
       <div className="chat-image avatar">
@@ -19,7 +21,9 @@ const Message = ({ message }) => {
           <img src={profilePic} alt="Chat bubble component" />
         </div>
       </div>
-      <div className={`chat-bubble text-white ${bubbleBgColor} pb-1 `}>
+      <div
+        className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass} pb-1 `}
+      >
         {message?.message}
       </div>
       <div className="chat-footer opacity-50 text-xs flex gap-1 items-center">

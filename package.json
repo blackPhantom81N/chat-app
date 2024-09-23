@@ -1,5 +1,5 @@
 {
-  "homepage": "http://blackPhantom81N,github.io/chat-app",
+  "homepage": "http://blackPhantom81N.github.io/chat-app",
   "name": "chat-app",
   "version": "1.0.0",
   "description": "Real-time chat app with login functionality created using MERN stack",
@@ -7,8 +7,8 @@
   "scripts": {
     "server": "nodemon backend/server.js",
     "start": "node backend/server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build --prefix frontend/chat-application",
+    "deploy": "gh-pages -d frontend/chat-application/build",
     "build": "npm install & npm install --prefix frontend/chat-application && npm run build --prefix frontend/chat-application"
   },
   "type": "module",
